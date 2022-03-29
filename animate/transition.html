@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+  <div>
+    <h1>Hello World</h1>
+  </div> 
+</body>
+<style>
+  /*
+  transition: transition-property | transition-duration | transition-timing-function | transition-delay;
+  */
+  h1 {
+    transform: translateY(50%);
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+  }
+  .trans {
+    transform: translate(0);
+    transition: all 1s ease;
+  }
+</style>
+<script>
+  const h1 = document.querySelector('h1')
+  h1.addEventListener("mouseover", () => {
+    h1.classList.add('trans')
+  })
+  h1.addEventListener("mouseleave", () => {
+    h1.classList.remove('trans')
+  })
+</script>
+</html>
