@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>out</h1>
+  <div onclick="handleClickOutside()" style="width: 500px; height: 300px; border: 1px solid #eee">
+    <!-- change src to your http://ip:3000 -->
+    <iframe src="http://192.168.7.82:8080/iframe.html" style="height: 300px"></iframe>
+  </div>
+</body>
+  <script>
+    window.addEventListener('message', (e) => {
+      console.log('receive event:', e.data);
+    }, false)
+   function handleClickOutside(){
+     console.log('out')
+   }
+  </script>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<div style="background: white; height: 500px; width: 100%" }}>
+  <h1>iframe content</h1>
+  <button onclick="handleClick()">click</button>
+</div>
+<script>
+  function handleClick(){
+    if (typeof window !== "undefined") {
+      console.log("send message");
+      const message = { height: 300, width: 300 };
+      window.parent.postMessage(message, "*");
+    }
+  }
+</script>
+</html>
